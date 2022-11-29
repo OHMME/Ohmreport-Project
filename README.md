@@ -40,7 +40,9 @@ click
 user-agents
 python-dateutil (Required by the Gophish library)
 ### Run
+```
 pip install -r requirements.txt
+```
 
 ### Documentation
 
