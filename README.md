@@ -29,6 +29,18 @@ time="2020-07-29T01:24:08Z" level=info msg="Please login with the username admin
 ```
 
 Releases of Gophish prior to v0.10.1 have a default username of `admin` and password of `gophish`.
+These Python libraries are required as well:
+### Requirements
+Gophish
+requests
+xlsxwriter
+configparser
+python-docx
+click
+user-agents
+python-dateutil (Required by the Gophish library)
+### Run
+pip install -r requirements.txt
 
 ### Documentation
 
