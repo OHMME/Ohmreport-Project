@@ -1,0 +1,23 @@
+{
+  "name": "gophish-v0.12.1-windows-64bit",
+  "version": "1.0.0",
+  "description": "![gophish logo](https://raw.github.com/gophish/gophish/master/static/images/gophish_purple.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OHMME/Goreport-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OHMME/Goreport-Project/issues"
+  },
+  "homepage": "https://github.com/OHMME/Goreport-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
