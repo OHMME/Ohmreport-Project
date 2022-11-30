@@ -1237,20 +1237,19 @@ Individuals Who Submitted: {self.total_unique_submitted}
 
 
 
-""")    
-        #ohm   
-  
+""")       
         for target in self.results:
             for event in self.timeline:                   
                 if event.message == "Email Sent" and event.email == target.email:
-                    # Parse the timestamp into separate date and time variables
                     # Ex: 2017-01-30T14:31:22.534880731-05:00
                     temp = event.time.split('T')
                     sent_date = temp[0]
                     sent_time = temp[1].split('.')[0]
                     Sent_Link_date = [ int(i) for i in sent_date.split('-')]
                     Sent_Link_time = [ int(i) for i in sent_time.split(':')] 
-                    sentdate = dt.datetime(Sent_Link_date[0], Sent_Link_date[1], Sent_Link_date[2], Sent_Link_time[0], Sent_Link_time[1], Sent_Link_time[2])+ timedelta(hours=7)
+                    sentdate = dt.datetime(Sent_Link_date[0], Sent_Link_date[1], Sent_Link_date[2],
+                                           Sent_Link_time[0], Sent_Link_time[1], Sent_Link_time[2])+ timedelta(hours=7)
+                    break
         for target in self.results:
             for event in self.timeline:                  
                 if event.message == "Email Opened" and event.email == target.email:
@@ -1259,7 +1258,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                     sent_time = temp[1].split('.')[0]
                     Open_Link_date = [ int(i) for i in sent_date.split('-')]
                     Open_Link_time = [ int(i) for i in sent_time.split(':')]
-                    opendate = dt.datetime(Open_Link_date[0], Open_Link_date[1], Open_Link_date[2], Open_Link_time[0], Open_Link_time[1], Open_Link_time[2])+ timedelta(hours=7)
+                    opendate = dt.datetime(Open_Link_date[0], Open_Link_date[1], Open_Link_date[2], 
+                                           Open_Link_time[0], Open_Link_time[1], Open_Link_time[2])+ timedelta(hours=7)
                     diffopen = str(opendate-sentdate)
                     count = 0
                     # 0:00:31
@@ -1274,8 +1274,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         if Count_minutes > 5 and Count_minutes  <= 30:
                             self.email_open2.append(target.email)
                         if Count_minutes > 30 and Count_hours <= 8:
-                            self.email_open3.append(target.email)
-                            
+                            self.email_open3.append(target.email)                         
                     elif count == 2:
                         Count_days = int(diffopen.split(",")[0].split()[0])
                         Count_hours = int(diffopen.split(",")[1].split(":")[0])
@@ -1284,7 +1283,6 @@ Individuals Who Submitted: {self.total_unique_submitted}
                             self.email_open4.append(target.email)
                         if Count_days > 1 and Count_days <= 7:
                             self.email_open5.append(target.email)
-
                     break
 
         for target in self.results:
@@ -1296,7 +1294,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                     sent_time = temp[1].split('.')[0]
                     Click_Link_date = [ int(i) for i in sent_date.split('-')]
                     Click_Link_time = [ int(i) for i in sent_time.split(':')]
-                    clickdate = dt.datetime(Click_Link_date[0], Click_Link_date[1], Click_Link_date[2], Click_Link_time[0], Click_Link_time[1], Click_Link_time[2])+ timedelta(hours=7)
+                    clickdate = dt.datetime(Click_Link_date[0], Click_Link_date[1], Click_Link_date[2], 
+                                            Click_Link_time[0], Click_Link_time[1], Click_Link_time[2])+ timedelta(hours=7)
                     diffclick = str(clickdate-sentdate)
                     # 0:00:31
                     # 12 days, 7:53:14                         
@@ -1332,7 +1331,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                     sent_time = temp[1].split('.')[0]
                     Submit_Link_date = [ int(i) for i in sent_date.split('-')]
                     Submit_Link_time = [ int(i) for i in sent_time.split(':')]
-                    submitdate = dt.datetime(Submit_Link_date[0], Submit_Link_date[1], Submit_Link_date[2], Submit_Link_time[0], Submit_Link_time[1], Submit_Link_time[2])+ timedelta(hours=7)
+                    submitdate = dt.datetime(Submit_Link_date[0], Submit_Link_date[1], Submit_Link_date[2], 
+                                             Submit_Link_time[0], Submit_Link_time[1], Submit_Link_time[2])+ timedelta(hours=7)
                     diffsubmit = str(submitdate-sentdate)
                     count = 0
                     for _ in diffsubmit.split(","):
