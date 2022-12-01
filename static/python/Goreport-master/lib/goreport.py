@@ -1252,7 +1252,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
                     break
         for target in self.results:
             for event in self.timeline:                  
-                if event.message == "Email Opened" and event.email == target.email:
+                if event.message == "Email Opened" and event.email == target.email:     
                     temp = event.time.split('T')
                     sent_date = temp[0]
                     sent_time = temp[1].split('.')[0]
@@ -1586,7 +1586,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
                 p = d.add_paragraph( f"{count}.{target['email']}")
         p = d.add_paragraph()
 
-        p = d.add_heading(f"""Top 10 The Fatest Submit Data link """, 2)     
+        p = d.add_heading(f"""Top 10 The Fastest Submit Data link """, 2)     
         submit = sorted(self.campaign_results_summary, key=lambda k: (k['submitdate']  == "null", k['submitdate']))
         submitcount = 0
         for target in submit:            
@@ -1607,7 +1607,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         break
         p = d.add_paragraph()
 
-        p = d.add_heading(f"""Top 10 The Fatest Users Clicked link """, 2)     
+        p = d.add_heading(f"""Top 10 The Fastest Users Clicked link """, 2)     
         click = sorted(self.campaign_results_summary, key=lambda x: (x['clickdate'] == "null", x['clickdate'] == "", x['clickdate']))
         clickcount = 0
         for target in click:      
@@ -1630,8 +1630,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         break
         p = d.add_paragraph()
       
-        p = d.add_heading(f"""Top 10 The Fatest Users Opened Email""", 2)     
-        # sortopen = sorted(ohm, key=lambda x: datetime.strptime(x['opendate'], "%Y-%m-%d %I:%M:%S"))
+        p = d.add_heading(f"""Top 10 The Fastest Users Opened Email""", 2)     
         open = sorted(self.campaign_results_summary, key=lambda x: (x['opendate'] == "null", x['opendate'] == "", x['opendate']))
         opencount = 0
         for target in open:
@@ -1644,7 +1643,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         sent_time = temp[1].split('.')[0]
                         Open_Link_date = [ int(i) for i in sent_date.split('-')]
                         Open_Link_time = [ int(i) for i in sent_time.split(':')]
-                        opendate = dt.datetime(Open_Link_date[0], Open_Link_date[1], Open_Link_date[2], Open_Link_time[0], Open_Link_time[1], Open_Link_time[2])+ timedelta(hours=7)
+                        opendate = dt.datetime(Open_Link_date[0], Open_Link_date[1], Open_Link_date[2], 
+                                               Open_Link_time[0], Open_Link_time[1], Open_Link_time[2])+ timedelta(hours=7)
                         p = d.add_paragraph(f"""{opencount}.{target['email']} {opendate.strftime("%Y-%m-%d %I:%M:%S %z %p")}""")
                         self.risk.append(target['email'])
                         break
