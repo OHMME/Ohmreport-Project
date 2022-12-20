@@ -1360,7 +1360,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
     
         d.add_page_break()
         d.add_heading("Analysis Data", 1)
-        p = d.add_heading(f"""User Open Email""", 4)                
+        p = d.add_heading(f"""User Open Email after Email Sent""", 4)                
         #User Open Email
         p = d.add_paragraph()
         run = p.add_run(f"""User Open Email after Email Sent <= 5 minutes: """)
@@ -1375,7 +1375,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Open Email after Email Sent > 5 minutes <= 30 minutes: """)
+        run = p.add_run(f"""User Open Email after Email Sent > 5 minutes <= 30 minutes: """)
         run.bold = True
         count = 0         
         for target in self.email_open2:
@@ -1387,7 +1387,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
         
-        run = p.add_run(f"""Total User Open Email after Email Sent > 30 minutes <= 8 Hours: """)
+        run = p.add_run(f"""User Open Email after Email Sent > 30 minutes <= 8 Hours: """)
         run.bold = True
         count = 0         
         for target in self.email_open3:
@@ -1399,7 +1399,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
         
-        run = p.add_run(f"""Total User Open Email after Email Sent > 8 minutes <= 1 day: """)
+        run = p.add_run(f"""User Open Email after Email Sent > 8 minutes <= 1 day: """)
         run.bold = True
         count = 0         
         for target in self.email_open4:
@@ -1411,7 +1411,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Open Email after Email Sent > 1 day <= 7 days: """)
+        run = p.add_run(f"""User Open Email after Email Sent > 1 day <= 7 days: """)
         run.bold = True
         count = 0         
         for target in self.email_open5:
@@ -1424,9 +1424,9 @@ Individuals Who Submitted: {self.total_unique_submitted}
         p = d.add_paragraph()
 
         #User Click Link
-        p = d.add_heading(f"""User Click Link""", 4) 
+        p = d.add_heading(f"""User Click Link after Email Sent""", 4) 
         p = d.add_paragraph()             
-        run = p.add_run(f"""total User Click Link after Email Sent  <= 5 minutes: """)
+        run = p.add_run(f"""User Click Link after Email Sent  <= 5 minutes: """)
         run.bold = True
         count = 0         
         for target in self.email_click1:
@@ -1438,7 +1438,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Click Link after Email Sent > 5 minutes <= 30 minutes: """)
+        run = p.add_run(f"""User Click Link after Email Sent > 5 minutes <= 30 minutes: """)
         run.bold = True
         count = 0         
         for target in self.email_click2:
@@ -1450,7 +1450,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Click Link after Email Sent > 30 minutes <= 8 Hours: """)
+        run = p.add_run(f"""User Click Link after Email Sent > 30 minutes <= 8 Hours: """)
         run.bold = True
         count = 0         
         for target in self.email_click3:
@@ -1462,7 +1462,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Click Link after Email Sent > 8 minutes <= 1 day: """)
+        run = p.add_run(f"""User Click Link after Email Sent > 8 minutes <= 1 day: """)
         run.bold = True
         count = 0         
         for target in self.email_click4:
@@ -1474,7 +1474,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Click Link after Email Sent > 1 day <= 7 days: """)
+        run = p.add_run(f"""User Click Link after Email Sent > 1 day <= 7 days: """)
         run.bold = True
         count = 0         
         for target in self.email_click5:
@@ -1487,9 +1487,9 @@ Individuals Who Submitted: {self.total_unique_submitted}
         p = d.add_paragraph()
 
         #User Submitted Data
-        p = d.add_heading(f"""User Submitted Data""", 4) 
+        p = d.add_heading(f"""Submitted Data after Email Sent""", 4) 
         p = d.add_paragraph() 
-        run = p.add_run(f"""Total User Submitted Data after Email Sent <= 5 minutes: """)
+        run = p.add_run(f"""User Submitted Data after Email Sent <= 5 minutes: """)
         run.bold = True
         count = 0         
         for target in self.email_submit1:
@@ -1501,7 +1501,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Submitted Data after Email Sent > 5 minutes <= 30 minutes: """)
+        run = p.add_run(f"""User Submitted Data after Email Sent > 5 minutes <= 30 minutes: """)
         run.bold = True
         count = 0         
         for target in self.email_submit2:
@@ -1513,7 +1513,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Submitted Data after Email Sent > 30 minutes <= 8 Hours: """)
+        run = p.add_run(f"""User Submitted Data after Email Sent > 30 minutes <= 8 Hours: """)
         run.bold = True
         count = 0         
         for target in self.email_submit3:
@@ -1525,7 +1525,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Submitted Data after Email Sent  > 8 minutes <= 1 day: """)
+        run = p.add_run(f"""User Submitted Data after Email Sent  > 8 minutes <= 1 day: """)
         run.bold = True
         count = 0         
         for target in self.email_submit4:
@@ -1537,7 +1537,7 @@ Individuals Who Submitted: {self.total_unique_submitted}
             p = d.add_paragraph(f"""{count}. {target}""")
         p = d.add_paragraph()
 
-        run = p.add_run(f"""Total User Submitted Data after Email Sent > 1 day <= 7 days:""")
+        run = p.add_run(f"""User Submitted Data after Email Sent > 1 day <= 7 days:""")
         run.bold = True
         count = 0         
         for target in self.email_submit5:
@@ -1586,8 +1586,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                 p = d.add_paragraph( f"{count}.{target['email']}")
         p = d.add_paragraph()
 
-        p = d.add_heading(f"""Top 10 The Fastest Submit Data link """, 2)     
-        submit = sorted(self.campaign_results_summary, key=lambda k: (k['submitdate']  == "null", k['submitdate']))
+        p = d.add_heading(f"""Top 10 The Fastest Users Submit Data link """, 2)     
+        submit = sorted(self.campaign_results_summary, key=lambda k: (k['submitdate']  == "null", k['submitdate'] == "", k['submitdate']))
         submitcount = 0
         for target in submit:            
             if target['email'] in self.targets_submitted:
@@ -1599,7 +1599,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         sent_time = temp[1].split('.')[0]
                         Submit_Link_date = [ int(i) for i in sent_date.split('-')]
                         Submit_Link_time = [ int(i) for i in sent_time.split(':')]
-                        submitdate = dt.datetime(Submit_Link_date[0], Submit_Link_date[1], Submit_Link_date[2], Submit_Link_time[0], Submit_Link_time[1], Submit_Link_time[2])+ timedelta(hours=7)
+                        submitdate = dt.datetime(Submit_Link_date[0], Submit_Link_date[1], Submit_Link_date[2],
+                                                 Submit_Link_time[0], Submit_Link_time[1], Submit_Link_time[2])+ timedelta(hours=7)
                         p = d.add_paragraph(f"""{submitcount}.{target['email']} {submitdate.strftime("%Y-%m-%d %I:%M:%S %z %p")}""")
                         self.risk.append(target['email'])
                         break 
@@ -1621,7 +1622,8 @@ Individuals Who Submitted: {self.total_unique_submitted}
                         sent_time = temp[1].split('.')[0]
                         Click_Link_date = [ int(i) for i in sent_date.split('-')]
                         Click_Link_time = [ int(i) for i in sent_time.split(':')]
-                        clickdate = dt.datetime(Click_Link_date[0], Click_Link_date[1], Click_Link_date[2], Click_Link_time[0], Click_Link_time[1], Click_Link_time[2])+ timedelta(hours=7)
+                        clickdate = dt.datetime(Click_Link_date[0], Click_Link_date[1], Click_Link_date[2],
+                                                Click_Link_time[0], Click_Link_time[1], Click_Link_time[2])+ timedelta(hours=7)
                         diffclick = str(clickdate-sentdate)
                         p = d.add_paragraph(f"""{clickcount}.{target['email']} {clickdate.strftime("%Y-%m-%d %I:%M:%S %z %p")}""")
                         self.risk.append(target['email'])
